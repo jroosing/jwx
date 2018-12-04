@@ -26,6 +26,22 @@ func newRSAPublicKey(key *rsa.PublicKey) (*RSAPublicKey, error) {
 	}, nil
 }
 
+func newRSAPublicKeyWithOptions(key *rsa.PublicKey, options map[string]string) (*RSAPublicKey, error) {
+	if key == nil {
+		return nil, errors.New(`non-nil rsa.PublicKey required`)
+	}
+
+	var hdr StandardHeaders
+	hdr.Set(KeyTypeKey, jwa.RSA)
+	for k, v := range options {
+		hdr.Set(k, v)
+	}
+	return &RSAPublicKey{
+		headers: &hdr,
+		key:     key,
+	}, nil
+}
+
 func newRSAPrivateKey(key *rsa.PrivateKey) (*RSAPrivateKey, error) {
 	if key == nil {
 		return nil, errors.New(`non-nil rsa.PrivateKey required`)

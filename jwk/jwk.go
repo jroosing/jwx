@@ -39,6 +39,20 @@ func New(key interface{}) (Key, error) {
 	}
 }
 
+// NewWithOptions creates a new Key with options
+func NewWithOptions(key interface{}, options map[string]string) (Key, error) {
+	if key == nil {
+		return nil, errors.New(`jwk.New requires a non-nil key`)
+	}
+
+	switch v := key.(type) {
+	case *rsa.PublicKey:
+		return newRSAPublicKeyWithOptions(v, options)
+	default:
+		return nil, errors.Errorf(`invalid key type %T`, key)
+	}
+}
+
 // Fetch fetches a JWK resource specified by a URL
 func Fetch(urlstring string) (*Set, error) {
 	u, err := url.Parse(urlstring)
