@@ -10,8 +10,8 @@ import (
 	"fmt"
 	"hash"
 
-	"github.com/lestrrat-go/jwx/internal/debug"
-	"github.com/lestrrat-go/jwx/internal/padbuf"
+	"github.com/jroosing/jwx/internal/debug"
+	"github.com/jroosing/jwx/internal/padbuf"
 	"github.com/pkg/errors"
 )
 

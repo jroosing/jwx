@@ -7,9 +7,9 @@ import (
 	"encoding/binary"
 	"io"
 
-	"github.com/lestrrat-go/jwx/internal/concatkdf"
-	"github.com/lestrrat-go/jwx/jwa"
-	"github.com/lestrrat-go/jwx/jwk"
+	"github.com/jroosing/jwx/internal/concatkdf"
+	"github.com/jroosing/jwx/jwa"
+	"github.com/jroosing/jwx/jwk"
 	"github.com/pkg/errors"
 )
 

@@ -5,7 +5,7 @@ import (
 	"crypto/ecdsa"
 	"crypto/rand"
 
-	"github.com/lestrrat-go/jwx/jwa"
+	"github.com/jroosing/jwx/jwa"
 	"github.com/pkg/errors"
 )
 
@@ -53,7 +53,7 @@ func newECDSA(alg jwa.SignatureAlgorithm) (*ECDSASigner, error) {
 	}
 
 	return &ECDSASigner{
-		alg: alg,
+		alg:  alg,
 		sign: signfn,
 	}, nil
 }

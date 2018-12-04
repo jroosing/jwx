@@ -8,9 +8,9 @@ import (
 	"encoding/json"
 	"testing"
 
-	"github.com/lestrrat-go/jwx/internal/base64"
-	"github.com/lestrrat-go/jwx/jwa"
-	"github.com/lestrrat-go/jwx/jwk"
+	"github.com/jroosing/jwx/internal/base64"
+	"github.com/jroosing/jwx/jwa"
+	"github.com/jroosing/jwx/jwk"
 	"github.com/pkg/errors"
 	"github.com/stretchr/testify/assert"
 )

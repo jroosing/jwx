@@ -18,10 +18,14 @@
 |DEBUG| Failed to encrypt: failed to crypt content: failed to fetch AEAD for AesContentCipher.encrypt: cipher: failed to create AES cipher for CBC: crypto/aes: invalid key size 48
 |DEBUG| Encrypt: failed to encrypt: failed to crypt content: failed to fetch AEAD for AesContentCipher.encrypt: cipher: failed to create AES cipher for CBC: crypto/aes: invalid key size 48
 --- FAIL: TestEncode_A128KW_A128CBC_HS256 (0.00s)
-	assertions.go:219:                         	Error Trace:	jwe_test.go:320
-			Error:		Received unexpected error "failed to crypt content: failed to fetch AEAD for AesContentCipher.encrypt: cipher: failed to create AES cipher for CBC: crypto/aes: invalid key size 48"
-			Messages:	Encrypt is successful
+	assertions.go:219: 
+                        
+	Error Trace:	jwe_test.go:320
+		
+	Error:		Received unexpected error "failed to crypt content: failed to fetch AEAD for AesContentCipher.encrypt: cipher: failed to create AES cipher for CBC: crypto/aes: invalid key size 48"
+		
+	Messages:	Encryjroosingssful
 		
 FAIL
 exit status 1
-FAIL	github.com/lestrrat-go/jwx/jwe	0.013s
+FAIL	github.com/jroosing/jwx/jwe	0.013s

@@ -7,9 +7,9 @@ import (
 	"encoding/json"
 	"math/big"
 
-	"github.com/lestrrat-go/jwx/internal/base64"
-	"github.com/lestrrat-go/jwx/jwa"
-	pdebug "github.com/lestrrat-go/pdebug"
+	"github.com/jroosing/jwx/internal/base64"
+	"github.com/jroosing/jwx/jwa"
+	pdebug "github.com/jroosing/pdebug"
 	"github.com/pkg/errors"
 )
 

@@ -3,7 +3,7 @@ package jwe
 import (
 	"testing"
 
-	"github.com/lestrrat-go/jwx/jwa"
+	"github.com/jroosing/jwx/jwa"
 	"github.com/stretchr/testify/assert"
 )
 

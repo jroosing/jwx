@@ -1,14 +1,14 @@
 package jws
 
 import (
-	"github.com/lestrrat-go/jwx/jwa"
-	"github.com/lestrrat-go/jwx/jwk"
+	"github.com/jroosing/jwx/jwa"
+	"github.com/jroosing/jwx/jwk"
 )
 
 type EncodedSignature struct {
-	Protected string          `json:"protected,omitempty"`
+	Protected string  `json:"protected,omitempty"`
 	Headers   Headers `json:"header,omitempty"`
-	Signature string          `json:"signature,omitempty"`
+	Signature string  `json:"signature,omitempty"`
 }
 
 type EncodedSignatureUnmarshalProxy struct {
@@ -62,7 +62,7 @@ type Message struct {
 type Signature struct {
 	headers   Headers `json:"header,omitempty"`    // Unprotected Headers
 	protected Headers `json:"protected,omitempty"` // Protected Headers
-	signature []byte          `json:"signature,omitempty"` // Signature
+	signature []byte  `json:"signature,omitempty"` // Signature
 }
 
 // JWKAcceptor decides which keys can be accepted

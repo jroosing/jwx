@@ -2,8 +2,8 @@
 
 Implementation of various JWx technologies
 
-[![Build Status](https://travis-ci.org/lestrrat-go/jwx.svg?branch=master)](https://travis-ci.org/lestrrat-go/jwx)
-[![GoDoc](https://godoc.org/github.com/lestrrat-go/jwx?status.svg)](https://godoc.org/github.com/lestrrat-go/jwx)
+[![Build Status](https://travis-ci.org/jroosing/jwx.svg?branch=master)](https://travis-ci.org/jroosing/jwx)
+[![GoDoc](https://godoc.org/github.com/jroosing/jwx?status.svg)](https://godoc.org/github.com/jroosing/jwx)
 
 ## Status
 
@@ -13,11 +13,11 @@ PR/issues welcome.
 
 | Package name                                              | Notes                                           |
 |-----------------------------------------------------------|-------------------------------------------------|
-| [jwt](https://github.com/lestrrat-go/jwx/tree/master/jwt) | [RFC 7519](https://tools.ietf.org/html/rfc7519) |
-| [jwk](https://github.com/lestrrat-go/jwx/tree/master/jwk) | [RFC 7517](https://tools.ietf.org/html/rfc7517) + [RFC 7638](https://tools.ietf.org/html/rfc7638) |
-| [jwa](https://github.com/lestrrat-go/jwx/tree/master/jwa) | [RFC 7518](https://tools.ietf.org/html/rfc7518) |
-| [jws](https://github.com/lestrrat-go/jwx/tree/master/jws) | [RFC 7515](https://tools.ietf.org/html/rfc7515) |
-| [jwe](https://github.com/lestrrat-go/jwx/tree/master/jwe) | [RFC 7516](https://tools.ietf.org/html/rfc7516) |
+| [jwt](https://github.com/jroosing/jwx/tree/master/jwt) | [RFC 7519](https://tools.ietf.org/html/rfc7519) |
+| [jwk](https://github.com/jroosing/jwx/tree/master/jwk) | [RFC 7517](https://tools.ietf.org/html/rfc7517) + [RFC 7638](https://tools.ietf.org/html/rfc7638) |
+| [jwa](https://github.com/jroosing/jwx/tree/master/jwa) | [RFC 7518](https://tools.ietf.org/html/rfc7518) |
+| [jws](https://github.com/jroosing/jwx/tree/master/jws) | [RFC 7515](https://tools.ietf.org/html/rfc7515) |
+| [jwe](https://github.com/jroosing/jwx/tree/master/jwe) | [RFC 7516](https://tools.ietf.org/html/rfc7516) |
 
 ### In progress:
 
@@ -43,14 +43,14 @@ As of this writing (Nov 2015), it's still lacking a few of the algorithms for JW
 
 ### JWT
 
-See the examples here as well: [https://github.com/lestrrat-go/jwx/jwt](./jwt/README.md)
+See the examples here as well: [https://github.com/jroosing/jwx/jwt](./jwt/README.md)
 
 ```go
 func ExampleJWT() {
   const aLongLongTimeAgo = 233431200
 
   t := jwt.New()
-  t.Set(jwt.SubjectKey, `https://github.com/lestrrat-go/jwx/jwt`)
+  t.Set(jwt.SubjectKey, `https://github.com/jroosing/jwx/jwt`)
   t.Set(jwt.AudienceKey, `Golang Users`)
   t.Set(jwt.IssuedAtKey, time.Unix(aLongLongTimeAgo, 0))
   t.Set(`privateClaimKey`, `Hello, World!`)
@@ -73,7 +73,7 @@ func ExampleJWT() {
 
 ### JWK
 
-See the examples here as well: https://godoc.org/github.com/lestrrat-go/jwx/jwk#pkg-examples
+See the examples here as well: https://godoc.org/github.com/jroosing/jwx/jwk#pkg-examples
 
 Create a JWK file from RSA public key:
 
@@ -85,7 +85,7 @@ import(
   "log"
   "os"
 
-  "github.com/lestrrat-go/jwx/jwk"
+  "github.com/jroosing/jwx/jwk"
 )
 
 func main() {
@@ -117,7 +117,7 @@ Parse and use a JWK key:
 import(
   "log"
 
-  "github.com/lestrrat-go/jwx/jwk"
+  "github.com/jroosing/jwx/jwk"
 )
 
 func main() {
@@ -155,8 +155,8 @@ import(
   "crypto/rsa"
   "log"
 
-  "github.com/lestrrat-go/jwx/jwa"
-  "github.com/lestrrat-go/jwx/jws"
+  "github.com/jroosing/jwx/jwa"
+  "github.com/jroosing/jwx/jws"
 )
 
 func main() {
@@ -203,7 +203,7 @@ Supported signature algorithms:
 
 ### JWE
 
-See the examples here as well: https://godoc.org/github.com/lestrrat-go/jwx/jwe#pkg-examples
+See the examples here as well: https://godoc.org/github.com/jroosing/jwx/jwe#pkg-examples
 
 ```go
 import(
@@ -211,8 +211,8 @@ import(
   "crypto/rsa"
   "log"
 
-  "github.com/lestrrat-go/jwx/jwa"
-  "github.com/lestrrat-go/jwx/jwe"
+  "github.com/jroosing/jwx/jwa"
+  "github.com/jroosing/jwx/jwe"
 )
 
 func main() {

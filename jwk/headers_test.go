@@ -4,8 +4,8 @@ import (
 	"fmt"
 	"testing"
 
-	"github.com/lestrrat-go/jwx/jwa"
-	"github.com/lestrrat-go/jwx/jwk"
+	"github.com/jroosing/jwx/jwa"
+	"github.com/jroosing/jwx/jwk"
 	"github.com/stretchr/testify/assert"
 )
 
@@ -36,7 +36,7 @@ func TestHeader(t *testing.T) {
 				return
 			}
 
-			if !assert.NoError(t, h.Set(k, v),"Set works for '%s'", k) {
+			if !assert.NoError(t, h.Set(k, v), "Set works for '%s'", k) {
 				return
 			}
 		}

@@ -5,7 +5,7 @@ import (
 	"crypto/rand"
 	"crypto/rsa"
 
-	"github.com/lestrrat-go/jwx/jwa"
+	"github.com/jroosing/jwx/jwa"
 	"github.com/pkg/errors"
 )
 
@@ -71,7 +71,7 @@ func newRSA(alg jwa.SignatureAlgorithm) (*RSASigner, error) {
 		return nil, errors.Errorf(`unsupported algorithm while trying to create RSA signer: %s`, alg)
 	}
 	return &RSASigner{
-		alg: alg,
+		alg:  alg,
 		sign: signfn,
 	}, nil
 }

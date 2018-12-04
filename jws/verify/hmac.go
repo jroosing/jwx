@@ -4,9 +4,9 @@ import (
 	"crypto/hmac"
 	"encoding/base64"
 
-	"github.com/lestrrat-go/jwx/jwa"
-	"github.com/lestrrat-go/jwx/jws/sign"
-	pdebug "github.com/lestrrat-go/pdebug"
+	"github.com/jroosing/jwx/jwa"
+	"github.com/jroosing/jwx/jws/sign"
+	pdebug "github.com/jroosing/pdebug"
 	"github.com/pkg/errors"
 )
 
