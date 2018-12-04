@@ -6,7 +6,7 @@ import (
 
 	"github.com/jroosing/jwx/jwa"
 	"github.com/jroosing/jwx/jws/sign"
-	pdebug "github.com/jroosing/pdebug"
+	pdebug "github.com/lestrrat-go/pdebug"
 	"github.com/pkg/errors"
 )
 

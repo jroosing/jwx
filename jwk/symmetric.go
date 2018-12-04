@@ -7,7 +7,7 @@ import (
 
 	"github.com/jroosing/jwx/internal/base64"
 	"github.com/jroosing/jwx/jwa"
-	pdebug "github.com/jroosing/pdebug"
+	pdebug "github.com/lestrrat-go/pdebug"
 	"github.com/pkg/errors"
 )
 

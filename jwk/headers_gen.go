@@ -8,7 +8,7 @@ import (
 	"fmt"
 
 	"github.com/jroosing/jwx/jwa"
-	"github.com/jroosing/pdebug"
+	"github.com/lestrrat-go/pdebug"
 	"github.com/pkg/errors"
 )
 

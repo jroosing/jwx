@@ -17,7 +17,7 @@ import (
 	"github.com/jroosing/jwx/jws"
 	"github.com/jroosing/jwx/jws/sign"
 	"github.com/jroosing/jwx/jws/verify"
-	pdebug "github.com/jroosing/pdebug"
+	pdebug "github.com/lestrrat-go/pdebug"
 	"github.com/stretchr/testify/assert"
 )
 
